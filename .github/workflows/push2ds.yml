@@ -29,7 +29,7 @@ jobs:
       - name: Rsync Deployments Action
         uses: Burnett01/rsync-deployments@4.1
         with:
-          switches: -avzr --delete --omit-dir-times --no-p --no-g --chmod=ugo=rwX
+          switches: -avzr --delete --omit-dir-times --no-p --no-g
           path: deployment-apps/
           remote_path: /opt/splunk/etc/deployment-apps
           remote_host: ${{ secrets.DEPLOY_HOST }}
