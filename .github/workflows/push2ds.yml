@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+ 
       # Runs the Rsync Deployment action
       - name: Rsync Deployments Action
         uses: Burnett01/rsync-deployments@4.1
@@ -33,5 +33,5 @@ jobs:
           path: deployment-apps/
           remote_path: /opt/splunk/etc/deployment-apps
           remote_host: ${{ secrets.DEPLOY_HOST }}
-          remote_user: ${{ secrets.DEPLOY_USER }}
-          remote_key: ${{ secrets.DEPLOY_KEY }}
+          remote_user: ${{ secrets.DEPLOY_USER1 }}
+          remote_key: ${{ secrets.DEPLOY_KEY1 }}
