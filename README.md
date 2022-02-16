@@ -1,2 +1,4 @@
 # test-deploy-ds
-# trigger github action - attempt 3
+## trigger github action
+
+- added serverclass.conf sync as well
