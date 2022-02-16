@@ -2,5 +2,5 @@
 ## trigger github action
 
 - added serverclass.conf sync as well
-- gave permission for ghuser to etc/system/local as well
-- test again 2
+- changed ssh user to splunk instead of ghuser
+- 
