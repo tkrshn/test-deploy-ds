@@ -45,11 +45,11 @@ jobs:
       - name: Reload serverclass
         uses: appleboy/ssh-action@master
         env:
-          serverclass: "test-githubaction-cm"
+          SERVERCLASS: "test-githubaction-cm"
         with:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
           envs: serverclass
           script: |
-            /opt/splunk/bin/splunk reload deploy-server -class $serverclass
+            /opt/splunk/bin/splunk reload deploy-server -class '$SERVERCLASS'
