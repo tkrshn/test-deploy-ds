@@ -52,4 +52,4 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           envs: SERVERCLASS
           script: |
-            /opt/splunk/bin/splunk reload deploy-server -class '$SERVERCLASS'
+            /opt/splunk/bin/splunk reload deploy-server -class "$SERVERCLASS"
