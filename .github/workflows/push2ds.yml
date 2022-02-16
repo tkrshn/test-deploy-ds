@@ -50,6 +50,6 @@ jobs:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
-          envs: serverclass
+          envs: SERVERCLASS
           script: |
             /opt/splunk/bin/splunk reload deploy-server -class '$SERVERCLASS'
