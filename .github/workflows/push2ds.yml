@@ -45,7 +45,7 @@ jobs:
       - name: Reload serverclass
         uses: appleboy/ssh-action@master
         env:
-          SERVERCLASS: "test-githubaction-cm"
+          SERVERCLASS: "-class test-githubaction-cm -class test-githubaction-uf"
           DS_SPLUNK_USER: "admin"
           DS_SPLUNK_PWD: ${{ secrets.DS_SPLUNK_PWD }}
         with:
@@ -54,4 +54,4 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           envs: SERVERCLASS,DS_SPLUNK_USER,DS_SPLUNK_PWD
           script: |
-            /opt/splunk/bin/splunk reload deploy-server -class $SERVERCLASS -auth $DS_SPLUNK_USER:$DS_SPLUNK_PWD
+            /opt/splunk/bin/splunk reload deploy-server $SERVERCLASS -auth $DS_SPLUNK_USER:$DS_SPLUNK_PWD
